@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>João Marcos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #nao {
+      position: absolute;
+    }
+    .btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Você quer ser nosso professor homenageado?</h1>
+  <button class="btn" onclick="responderSim()">SIM</button>
+  <button class="btn" id="nao" onmouseover="moverBotao()">NÃO</button>
+
+  <script>
+    function responderSim() {
+      window.location.href = "sim.html"; // Altere para a URL desejada
+    }
+
+    function moverBotao() {
+      const botao = document.getElementById("nao");
+      const largura = window.innerWidth - botao.offsetWidth;
+      const altura = window.innerHeight - botao.offsetHeight;
+      const novoX = Math.random() * largura;
+      const novoY = Math.random() * altura;
+      botao.style.left = `${novoX}px`;
+      botao.style.top = `${novoY}px`;
+    }
+  </script>
+</body>
+</html>
